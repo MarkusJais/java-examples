@@ -11,7 +11,7 @@ record Mammal(String mame, int weightInKg) implements Animal {
 }
 
 
-public class PatternMatchingDemo {
+public class PatternMatchingWithSealedClasses {
 
     public static void main(final String[] args) {
         Animal bike = new Bird("Golden Eagle", 230);
