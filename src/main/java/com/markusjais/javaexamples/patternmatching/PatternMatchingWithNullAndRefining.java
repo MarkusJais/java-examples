@@ -24,7 +24,6 @@ public class PatternMatchingWithNullAndRefining {
             default        -> System.out.println("not a String");
         };
     }
-
 }
 
 

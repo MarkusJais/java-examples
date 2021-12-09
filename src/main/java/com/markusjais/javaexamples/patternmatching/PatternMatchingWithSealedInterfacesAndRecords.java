@@ -11,22 +11,20 @@ record Mammal(String mame, int weightInKg) implements Animal {
 }
 
 
-public class PatternMatchingWithSealedClasses {
+public class PatternMatchingWithSealedInterfacesAndRecords {
 
     public static void main(final String[] args) {
-        Animal bike = new Bird("Golden Eagle", 230);
-        print(bike);
+        Animal animal = new Bird("Golden Eagle", 230);
+        print(animal);
     }
 
     private static void print(Animal animal) {
         String toPrint = switch (animal) {
-            case Bird body -> "it's a bird";
-            case Mammal engine -> "it's a mammal";
+            case Bird b -> "it's a bird: " + b.name();
+            case Mammal m -> "it's a mammal and it weighs: " + m.weightInKg() + " kg";
         };
-
         System.out.println (toPrint);
     }
-
 }
 
 
