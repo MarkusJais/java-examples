@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * sorts words in a text by frequency.
+ * sorts words by frequency.
  * the most common words are printed first
  */
 public class WordFrequencyCount {
 
     public static void main(String[] args) throws IOException {
 
-        // removed a dash, otherwise it's the text from "A Tale of Two Cities" by Charles Dickens
+        // removed a dash, otherwise as it appeared in "A Tale of Two Cities" by Charles Dickens
         String textByCharlesDickens = """
                 It was the best of times, it was the worst of times,
                 it was the age of wisdom, it was the age of foolishness,

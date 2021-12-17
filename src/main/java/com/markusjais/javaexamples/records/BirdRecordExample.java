@@ -4,7 +4,7 @@ record Bird(String name, int weightInGrams, int wingspanInCm) {
 }
 
 /**
- * demonstrates the simple use of a record
+ * demonstrates a simple use of a record
  */
 public class BirdRecordExample {
     public static void main(String[] args) {

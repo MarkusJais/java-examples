@@ -39,7 +39,7 @@ public class PatternMatchingWithSealedClassesAndGuardedPatterns {
     private static void print(Bike bike) {
         String toPrint = switch (bike) {
             case RoadBike rb && rb.getNumberOfGears() < 24 -> "You're bike is outdated";
-            case RoadBike roadBike -> "Don't hit old ladies";
+            case RoadBike roadBike -> "Don't hit old ladies with your road bike";
             case FullSuss mtb && mtb.getNumberOfGears() > 12 -> "You're a weird bloke";
             case MountainBike mountainBike -> "drive carefully";
             case GravelBike gravelBike -> "you're a modern rider";
