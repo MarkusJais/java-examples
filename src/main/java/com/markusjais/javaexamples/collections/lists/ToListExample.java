@@ -4,7 +4,7 @@ package com.markusjais.javaexamples.collections.lists;
 import java.util.List;
 
 /**
- * shows how to use "toList()" on streams. This method was added with Java 16.
+ * shows how to use "toList()" on streams. This method was added in Java 16.
  */
 public class ToListExample {
 
