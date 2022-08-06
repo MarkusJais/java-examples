@@ -20,6 +20,7 @@ public class PatternMatchingWithSealedInterfacesAndRecords {
 
     private static void print(Animal animal) {
         String toPrint = switch (animal) {
+            case Bird(String name, int wingspan) when wingspan > 200 -> "must be an eagle";
             case Bird b -> "it's a bird: " + b.name();
             case Mammal m -> "it's a mammal and it weighs: " + m.weightInKg() + " kg";
         };

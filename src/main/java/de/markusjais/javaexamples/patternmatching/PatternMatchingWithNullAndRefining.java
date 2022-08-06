@@ -19,7 +19,7 @@ public class PatternMatchingWithNullAndRefining {
     private static void printStuff(Object obj) {
         switch (obj) {
             case null  -> System.out.println("Dude, what are you doing?");
-            case String s && s.equals("Java") -> System.out.println("good boy!");
+            case String s when s.equals("Java") -> System.out.println("good boy!");
             case String s -> System.out.printf("use Java, not %s\n", s);
             default        -> System.out.println("not a String");
         };
