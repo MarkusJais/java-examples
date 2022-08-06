@@ -22,10 +22,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.10.1</version>
                 <configuration>
+                    <enablePreview>true</enablePreview>
                     <release>${maven.compiler.source}</release>
-                    <compilerArgs>--enable-preview</compilerArgs>
+                    <compilerArgs>
+                        <arg>--add-modules=jdk.incubator.concurrent</arg>
+                    </compilerArgs>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.source}</target>
                 </configuration>
@@ -54,17 +57,19 @@
             </plugin>
 
 
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <argLine>--enable-preview</argLine>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>2.22.2</version>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--                <version>3.0.0-M5</version>-->
+<!--                <configuration>-->
+<!--                    <compilerArgs>-->
+<!--                    <arg>&#45;&#45;add-modules=jdk.incubator.concurrent</arg>-->
+<!--                    <argLine>&#45;&#45;enable-preview</argLine>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -75,6 +80,7 @@
                     <commandlineArgs>--enable-preview</commandlineArgs>
                     <arguments>
                         <argument>--enable-preview</argument>
+                        <argument>--add-modules=jdk.incubator.concurrent></argument>
                     </arguments>
             </configuration>
         </plugin>
