@@ -4,7 +4,6 @@ import jdk.incubator.concurrent.StructuredTaskScope;
 
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
 public class StructuredConcurrencyBasics {
 
@@ -12,15 +11,14 @@ public class StructuredConcurrencyBasics {
         System.out.println("Result:" + getResult());
     }
 
-
     private static int getResult() throws ExecutionException, InterruptedException {
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
             // can be a method reference
-            Future<Integer> intFuture_1  = scope.fork(StructuredConcurrencyBasics::getRandomInt);
+            var intFuture_1  = scope.fork(StructuredConcurrencyBasics::getRandomInt);
 
             // can be a lambda
-            Future<Integer> intFuture_2 = scope.fork(() -> getRandomInt());
+            var intFuture_2 = scope.fork(() -> getRandomInt());
 
             scope.join();
             scope.throwIfFailed();

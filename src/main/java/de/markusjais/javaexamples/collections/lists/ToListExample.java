@@ -12,5 +12,7 @@ public class ToListExample {
         var cats = List.of("tiger",  "puma", "leopard");
         var catsUpperCase = cats.stream().map(String::toUpperCase).toList();
         System.out.println(catsUpperCase);
+
+
     }
 }
