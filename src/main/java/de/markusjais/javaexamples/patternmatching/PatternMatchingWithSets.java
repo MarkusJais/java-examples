@@ -23,9 +23,9 @@ public class PatternMatchingWithSets {
 
     private static String whichSetAreYou(Set<String> set) {
         return switch (set) {
-            case HashSet h -> String.join(", ", h);
-            case TreeSet h -> String.join(":", h);
-            case Set h -> String.join("#", h);
+            case HashSet<String> h -> String.join(", ", h);
+            case TreeSet<String> h -> String.join(":", h);
+            case Set<String> h -> String.join("#", h);
         };
     }
 

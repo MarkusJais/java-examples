@@ -1,9 +1,9 @@
 package de.markusjais.javaexamples.concurrency.loom;
 
-import jdk.incubator.concurrent.StructuredTaskScope;
 
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.StructuredTaskScope;
 
 public class StructuredConcurrencyBasics {
 
@@ -24,7 +24,7 @@ public class StructuredConcurrencyBasics {
             scope.throwIfFailed();
 
             // this should always succeed, so we just return the results
-            return intFuture_1.resultNow() + intFuture_2.resultNow();
+            return intFuture_1.get() + intFuture_2.get();
         }
     }
 

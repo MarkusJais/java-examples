@@ -24,7 +24,7 @@ public class PatternMatchingWithSealedInterfacesAndRecords {
             case Bird b -> "it's a bird: " + b.name();
             case Mammal m -> "it's a mammal and it weighs: " + m.weightInKg() + " kg";
         };
-        System.out.println (toPrint);
+        System.out.println(toPrint);
     }
 }
 

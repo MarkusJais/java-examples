@@ -9,9 +9,9 @@
     <description>Java Examples</description>
 
     <properties>
-        <java.version>19</java.version>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
 
@@ -27,7 +27,7 @@
                     <enablePreview>true</enablePreview>
                     <release>${maven.compiler.source}</release>
                     <compilerArgs>
-                        <arg>--add-modules=jdk.incubator.concurrent</arg>
+                        <arg>--enable-preview</arg>
                     </compilerArgs>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.source}</target>
